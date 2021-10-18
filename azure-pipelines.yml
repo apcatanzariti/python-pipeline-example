@@ -12,12 +12,12 @@
             "start_date": "2021-01-05 08:00:00",
             "end_date": "2021-01-08 08:00:00"
           }
-        }
+       }
 # Create and test a Python package on multiple Python versions.
 # Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
-- trigger:
+trigger:
 - pr
 
 pool:
