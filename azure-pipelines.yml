@@ -6,7 +6,7 @@ resources:
   - repository: 'master'
     pr:
       branches:
-      - /*
+      - master
 
 variables:
 - group: TestVarGroup
