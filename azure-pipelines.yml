@@ -2,7 +2,7 @@ trigger:
 - pr
 
 variables:
-- group: testVarGroup
+- group: TestVarGroup
 
 jobs:
 - job: job1
@@ -12,6 +12,7 @@ jobs:
     job_variable1: value1
   steps:
   -  bash: echo $(job_variable1)
+  -  bash: echo $(testVarOne)
 
 - job: job2
   pool:
@@ -20,3 +21,4 @@ jobs:
     job_variable2: value2
   steps:
   - bash: echo $(job_variable2)
+  - bash: $(testVarTwo)
