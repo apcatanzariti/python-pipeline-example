@@ -20,5 +20,5 @@ jobs:
   variables:
     job_variable2: value2
   steps:
-  - bash: echo $(job_variable2)
-  - bash: $(testVarTwo)
+  -  bash: echo $(job_variable2)
+  -  bash: echo $(testVarTwo)
