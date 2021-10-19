@@ -1,5 +1,12 @@
-trigger:
-- pr
+# trigger:
+# - pr
+
+resources:
+  repositories:
+  - repository: 'master'
+    pr:
+      branches:
+      - /*
 
 variables:
 - group: TestVarGroup
