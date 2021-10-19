@@ -1,12 +1,11 @@
 # trigger:
 # - pr
 
-resources:
-  repositories:
-  - repository: 'master'
-    pr:
-      branches:
-      - master
+pr:
+  branches:
+    include: []
+    exclude: [ none ]
+
 
 variables:
 - group: TestVarGroup
