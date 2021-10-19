@@ -1,10 +1,19 @@
 trigger:
-- master
+- pr
 
-pool:
-  vmImage: ubuntu-latest
+jobs:
+- job: job1
+  pool:
+    vmImage: 'ubuntu-latest'
+  variables:
+    job_variable1: value1
+  steps:
+  -  bash: echo $(job_variable1)
 
-steps:
-
-- script: |
-    printenv
+- job: job2
+  pool:
+    vmImage: 'ubuntu-latest'
+  variables:
+    job_variable2: value2
+  steps:
+  - bash: echo $(job_variable2)
