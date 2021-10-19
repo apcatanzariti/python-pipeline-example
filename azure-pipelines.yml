@@ -1,6 +1,9 @@
 trigger:
 - pr
 
+variables:
+- group: testVarGroup
+
 jobs:
 - job: job1
   pool:
