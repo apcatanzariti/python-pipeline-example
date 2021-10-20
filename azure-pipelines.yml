@@ -9,6 +9,7 @@ pr:
 
 variables:
 - group: TestVarGroup
+- template: master.txt
 
 jobs:
 - job: job1
