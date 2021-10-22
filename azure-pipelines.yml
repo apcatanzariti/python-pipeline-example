@@ -6,26 +6,34 @@ pr:
     include: []
     exclude: [ none ]
 
+pool:
+  vmImage: ubuntu-latest
+steps:
+- script: printenv
+  displayName: Print Variables
 
-variables:
-- group: TestVarGroup
-- template: master.txt
+# variables:
+# - group: TestVarGroup
+# - template: master.txt
 
-jobs:
-- job: job1
-  pool:
-    vmImage: 'ubuntu-latest'
-  variables:
-    job_variable1: value1
-  steps:
-  -  bash: echo $(job_variable1)
-  -  bash: echo $(testVarOne)
+# jobs:
+# - job: job1
+#   pool:
+#     vmImage: 'ubuntu-latest'
+#   variables:
+#     job_variable1: value1
+#   steps:
+#   -  bash: echo $(job_variable1)
+#   -  bash: echo $(testVarOne)
 
-- job: job2
-  pool:
-    vmImage: 'ubuntu-latest'
-  variables:
-    job_variable2: value2
-  steps:
-  -  bash: echo $(job_variable2)
-  -  bash: echo $(testVarTwo)
+# - job: job2
+#   pool:
+#     vmImage: 'ubuntu-latest'
+#   variables:
+#     job_variable2: value2
+#   steps:
+#   -  bash: echo $(job_variable2)
+#   -  bash: echo $(testVarTwo)
+
+
+
